@@ -1,5 +1,8 @@
 en:
   hello: "Hello world"
+  common:
+    error_msg: "The form contains "
+    error: "error"
   static_pages:
     footer:
       about: "About"
@@ -14,3 +17,13 @@ en:
       title: "Home"
       header: "Welcome to Tiny Blog"
       btn_signup: "Sign Up Now"
+  users:
+    new:
+      title: "Sign up"
+      header: "Sign Up"
+      lb_name: "name"
+      lb_email: "email"
+      lb_pass: "password"
+      lb_pass_conf: "password_confirmation"
+      btn_submit: "Create my account"
+      msg_success: "Welcome to Tiny Blog."
