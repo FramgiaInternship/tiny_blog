@@ -15,7 +15,7 @@ class EntriesController < ApplicationController
 
   def show
     @entry = Entry.find_by id: params[:id]
-    @user = current_user
+    @user = @entry.user
   end
 
   private

@@ -55,5 +55,7 @@ en:
       title: "title"
       content: "content"
     show:
-      btn_follow: "Follow"
-      btn_unfollow: "Unfollow"
+      btn_follow: "follow"
+      btn_unfollow: "unfollow"
+      lb_following: "following"
+      lb_follower: "followers"

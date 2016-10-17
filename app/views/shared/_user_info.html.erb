@@ -4,6 +4,7 @@
       <%= gravatar_for @user %>
       <%= @user.name %>
     </h1>
+    <%= render "shared/stats" %>
   </section>
-  <%= link_to t("entries.show.follow"), "#", class: "btn btn-primary" %>
+  <%= render "shared/follow_form" if logged_in? %>
 </aside>
