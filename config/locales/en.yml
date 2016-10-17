@@ -54,3 +54,6 @@ en:
       success: "Your entry have been posted!"
       title: "title"
       content: "content"
+    show:
+      btn_follow: "Follow"
+      btn_unfollow: "Unfollow"

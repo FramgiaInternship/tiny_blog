@@ -2,10 +2,14 @@
   <h3><%= @entry.title.titleize %></h3>
 </div>
 <div class="time_entry">
+  <i class="fa fa-calendar"></i>
   <%= @entry.created_at.strftime Settings.DATE_TIME_FORMAT %>
 </div>
 <div class="content_entry">
   <p>
     <%= simple_format @entry.content %>
+  </p>
+  <p class="text-right">
+    <%= @entry.user.name.titleize %>.
   </p>
 </div>
