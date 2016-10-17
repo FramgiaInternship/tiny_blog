@@ -9,6 +9,7 @@ class UsersController < ApplicationController
     @user = User.new user_params
     if @user.save
       flash[:success] = t "users.new.msg_success"
+      log_in @user
       redirect_to root_url
     else
       render 'new'
