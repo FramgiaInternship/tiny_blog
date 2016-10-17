@@ -5,5 +5,7 @@
   </aside>
   <div class="col-md-8">
     <%= render "shared/entry" %>
+    <hr>
+    <%= render "comments/comment_form" if logged_in? %>
   </div>
 </div>

@@ -1,0 +1,8 @@
+<div class="">
+  <%= form_for @comment do |f| %>
+    <%= render "shared/error_messages", object: f.object %>
+    <%= f.text_area :body, placeholder: t("comments.text_area_holder"), class: "form-control" %>
+    <%= hidden_field_tag :entry_id, @entry.id %>
+    <%= f.submit t("comments.btn_submit"), class: "btn btn-primary pull-right btn-comment" %>
+  <% end %>
+</div>

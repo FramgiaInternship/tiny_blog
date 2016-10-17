@@ -60,3 +60,7 @@ en:
       lb_following: "following"
       lb_follower: "followers"
       entries_count: "entries"
+  comments:
+    cmt_count: "comment"
+    text_area_holder: "Leave a comment..."
+    btn_submit: "Send"
