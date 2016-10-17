@@ -1,10 +1,10 @@
 <li id="micropost-<%= entry.id %>">
   <%= link_to gravatar_for(entry.user, size: 50), entry.user %>
-  <b class="title"><%= link_to entry.title.titleize, "#" %></b>
+  <b class="title"><%= link_to entry.title.titleize, entry %></b>
   <br>
   <span class="conent">
     <%= entry.content.first(Settings.CONTENT_LIMIT) %>
-    <%= link_to "... #{t 'entries.index.read_more'}", "#" %>
+    <%= link_to "... #{t 'entries.index.read_more'}", entry %>
   </span>
   <small class="timestamp">
     <span><%= t("entries.index.time_stamp", time: time_ago_in_words(entry.created_at), user: entry.user.name) %></span>

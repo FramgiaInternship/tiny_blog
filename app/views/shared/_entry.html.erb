@@ -1,0 +1,11 @@
+<div class="title_entry">
+  <h3><%= @entry.title.titleize %></h3>
+</div>
+<div class="time_entry">
+  <%= @entry.created_at.strftime Settings.DATE_TIME_FORMAT %>
+</div>
+<div class="content_entry">
+  <p>
+    <%= simple_format @entry.content %>
+  </p>
+</div>

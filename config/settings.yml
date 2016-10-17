@@ -1,2 +1,3 @@
 GRAVATAR_PATH: "https://secure.gravatar.com/avatar/"
 CONTENT_LIMIT: 90
+DATE_TIME_FORMAT: "%d-%m-%Y %H:%M"

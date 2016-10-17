@@ -13,6 +13,10 @@ class EntriesController < ApplicationController
     end
   end
 
+  def show
+    @entry = Entry.find_by id: params[:id]
+  end
+
   private
   def entry_params
     params.require(:entry).permit(:title, :content)
