@@ -1,6 +1,8 @@
 <% provide :title, @entry.title.titleize %>
 <div class="row">
-  <%= render "shared/user_info" %>
+  <aside class="col-md-4">
+    <%= render "shared/user_info" %>
+  </aside>
   <div class="col-md-8">
     <%= render "shared/entry" %>
   </div>
