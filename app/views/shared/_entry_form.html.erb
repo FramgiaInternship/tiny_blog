@@ -1,0 +1,11 @@
+<%= form_for @entry  do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+  <div class="field">
+    <%= f.label t "entries.create.title" %>
+    <%= f.text_field :title, class: "form-control" %>
+
+    <%= f.label t "entries.create.content" %>
+    <%= f.text_area :content, placeholder: t("entries.create.text_area_holder"), class: "entry_content form-control" %>
+  </div>
+  <%= f.submit "Post", class: "btn btn-primary" %>
+<% end %>

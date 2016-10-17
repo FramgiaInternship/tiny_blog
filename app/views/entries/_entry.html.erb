@@ -1,0 +1,18 @@
+<li id="micropost-<%= entry.id %>">
+  <%= link_to gravatar_for(entry.user, size: 50), entry.user %>
+  <b class="title"><%= link_to entry.title.titleize, "#" %></b>
+  <br>
+  <span class="conent">
+    <%= entry.content.first(Settings.CONTENT_LIMIT) %>
+    <%= link_to "... #{t 'entries.index.read_more'}", "#" %>
+  </span>
+  <small class="timestamp">
+    <span><%= t("entries.index.time_stamp", time: time_ago_in_words(entry.created_at), user: entry.user.name) %></span>
+    <span>
+      <% if current_user? entry.user %>
+        <%= link_to t("entries.index.link_delete"), entry, method: :delete,
+                                                           data: { confirm: t("entries.index.delete_confirmation") } %>
+      <% end %>
+    </span>
+  </small>
+</li>

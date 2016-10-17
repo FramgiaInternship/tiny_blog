@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :entries, dependent: :destroy
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :name, presence: true, length: { maximum: 50}
   validates :email, presence: true, length: { maximum: 255 },
@@ -7,4 +8,10 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 6 }, presence: true
   has_secure_password
   before_save { email.downcase! }
+
+  # See "following user" for the full implementation.
+  def feed
+    Entry.where("user_id = ?", id)
+  end
+
 end
