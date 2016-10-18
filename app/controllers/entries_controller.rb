@@ -8,7 +8,7 @@ class EntriesController < ApplicationController
       redirect_to root_url
     else
       @feed_items = feed
-      render 'static_pages/home'
+      render "static_pages/home"
     end
   end
 

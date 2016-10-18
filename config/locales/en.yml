@@ -6,6 +6,7 @@ en:
     link_delete: "Delete"
     delete_confirmation: "Are you sure you want to delete this %{item}?"
     warning_login: "Please log in to continue!"
+    link_users: "Users"
   static_pages:
     footer:
       about: "About"
@@ -18,11 +19,13 @@ en:
       log_out: "Log out"
       account: "Account"
       sign_up: "Sign up"
+      link_settings: "Settings"
+      link_profile: "Profile"
     home:
       title: "Home"
       header: "Welcome to Tiny Blog"
       btn_signup: "Sign Up Now"
-  users:
+  user:
     new:
       title: "Sign up"
       header: "Sign Up"
@@ -51,7 +54,10 @@ en:
       time_stamp: "Posted %{time} ago by %{user}."
       delete_confirmation: "Are you sure you want to delete this entry?"
       header: "New Feeds"
-      msg_log_in: "Please login to post new entry."
+      msg_log_in_1: "Sign up"
+      msg_log_in_2: "or"
+      msg_log_in_3: "login"
+      msg_log_in_4: "to post new entry."
     create:
       text_area_holder: "Say something..."
       success: "Your entry have been posted!"
@@ -67,6 +73,7 @@ en:
     cmt_count: "comment"
     text_area_holder: "Leave a comment..."
     btn_submit: "Send"
+    cmt_fails: "Cannot submit comment!"
   users:
     no_entries: "There is no entry so far."
     entry_count: "Entries"

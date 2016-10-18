@@ -4,13 +4,9 @@ class CommentsController < ApplicationController
     @comment = current_user.comments.create
     @comment.body = params[:comment][:body]
     @comment.entry_id = params[:entry_id]
-    if @comment.save
-      redirect_to :back
-    else
-      @entry = Entry.find_by id: params[:entry_id]
-      @user = @entry.user
-      @comment = current_user.comments.build if logged_in?
-      render 'entries/show'
+    unless @comment.save
+      flash[:danger] = t "comments.cmt_fails"
     end
+    redirect_to :back
   end
 end

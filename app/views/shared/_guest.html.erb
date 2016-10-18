@@ -1,0 +1,13 @@
+<div class="col-md-8 col-md-offset-2">
+  <div class="alert alert-info">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>
+      <%= link_to t("entries.index.msg_log_in_1"), login_path %>
+      <%= t "entries.index.msg_log_in_2" %>
+      <%= link_to t("entries.index.msg_log_in_3"), login_path %>
+      <%= t "entries.index.msg_log_in_4" %>
+    </strong>
+  </div>
+  <h3><%= t "entries.index.header" %></h3>
+  <%= render "shared/feed" %>
+</div>

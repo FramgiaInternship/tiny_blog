@@ -12,14 +12,14 @@ class UsersController < ApplicationController
   end
 
   def new
-    @btn_submit = t "users.new.btn_submit"
+    @btn_submit = t "user.new.btn_submit"
     @user = User.new
   end
 
   def create
     @user = User.new user_params
     if @user.save
-      flash[:success] = t "users.new.msg_success"
+      flash[:success] = t "user.new.msg_success"
       log_in @user
       redirect_to root_url
     else
