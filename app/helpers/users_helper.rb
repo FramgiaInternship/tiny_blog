@@ -9,6 +9,6 @@ module UsersHelper
 
   # Returns true if current user is admin.
   def admin?
-    current_user.admin?
+    current_user.nil? ? false : current_user.admin?
   end
 end

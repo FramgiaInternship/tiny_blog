@@ -306,7 +306,6 @@ span.picture {
 }
 
 .entry_content {
-    height: 120px !important;
     margin-bottom: 15px;
 }
 
@@ -321,7 +320,7 @@ span.picture {
 }
 
 .stats {
-  // margin-top: 25px;
+  margin-top: 25px;
 }
 
 aside section {
@@ -345,7 +344,6 @@ aside section {
 }
 
 .cmt_body p {
-  // margin: 0px;
   text-align: justify;
 }
 
@@ -359,10 +357,6 @@ aside section {
 
 .new_entry {
   margin-top: 40px;
-}
-
-.content_area {
-  height: 320px !important;
 }
 
 .btn-delete {

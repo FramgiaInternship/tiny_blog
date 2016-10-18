@@ -11,3 +11,13 @@
   <h3><%= t "entries.index.header" %></h3>
   <%= render "shared/feed" %>
 </div>
+
+<script>
+  $(document).ready(function(){
+    SHOW_TIME = 5000;
+    FADE_TIME = 500;
+    $(".alert-info").fadeTo(SHOW_TIME, FADE_TIME).slideUp(FADE_TIME, function(){
+      $(".alert-info").slideUp(FADE_TIME);
+    });
+  });
+</script>
