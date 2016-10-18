@@ -1,6 +1,6 @@
 <% @user ||= current_user %>
 <div class="stats">
-  <a href="#">
+  <a href="<%= user_url @user %>">
     <strong id="entries" class="stat">
       <%= @user.entries.count %>
     </strong>

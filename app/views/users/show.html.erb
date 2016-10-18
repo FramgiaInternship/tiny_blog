@@ -1,0 +1,19 @@
+<% provide :title, @user.name %>
+<div class="row">
+  <aside class="col-md-4">
+    <%= render "shared/user_info" %>
+  </aside>
+  <div class="col-md-8">
+    <% if (@entries = @user.entries).any? %>
+    <% @entries = @entries.paginate(page: params[:page]) %>
+      <h3><%= "#{t 'users.entry_count'} (#{@entries.count})" %></h3>
+      <ol class="microposts">
+        <%= render "shared/entry_user" %>
+      </ol>
+    <% else %>
+      <p>
+        <%= t "users.no_entries" %>
+      </p>
+    <% end %>
+  </div>
+</div>

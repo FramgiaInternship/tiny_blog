@@ -65,3 +65,6 @@ en:
     cmt_count: "comment"
     text_area_holder: "Leave a comment..."
     btn_submit: "Send"
+  users:
+    no_entries: "There is no entry so fa."
+    entry_count: "Entries"

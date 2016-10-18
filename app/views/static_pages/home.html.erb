@@ -4,8 +4,10 @@
     <section class="user_info">
       <% if logged_in? %>
         <h1>
-          <%= gravatar_for @user %>
-          <%= @user.name %>
+          <a href="<%= user_url @user %>">
+            <%= gravatar_for @user %>
+            <%= @user.name %>
+          </a>
         </h1>
         <%= render "shared/stats" %>
       <% else %>

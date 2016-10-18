@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, only: [:following, :followers]
   attr_accessor :name, :email
+
+  def show
+    @user = User.includes(:entries).find(params[:id])
+  end
+
   def new
     @btn_submit = t "users.new.btn_submit"
     @user = User.new

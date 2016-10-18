@@ -11,7 +11,7 @@
     <span>
       <% if current_user? entry.user %>
         <%= link_to t("entries.index.link_delete"), entry, method: :delete,
-                                                           data: { confirm: t("entries.index.delete_confirmation") } %>
+          data: { confirm: t("entries.index.delete_confirmation") } %>
       <% end %>
     </span>
   </small>

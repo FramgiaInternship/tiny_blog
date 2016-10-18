@@ -1,0 +1,8 @@
+<% if @entries.any? %>
+  <ol class="microposts">
+    <%= render @entries %>
+  </ol>
+  <div class="pull-right">
+    <%= will_paginate @entries %>
+  </div>
+<% end %>
