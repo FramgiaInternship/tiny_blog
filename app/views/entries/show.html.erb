@@ -6,6 +6,12 @@
   <div class="col-md-8">
     <%= render "shared/entry" %>
     <hr>
-    <%= render "comments/comment_form" if logged_in? %>
+    <p class="cmt_count">
+      <b><i class="fa fa-comments-o"></i> <%= pluralize(@cmt_items.count, 'comment') %></b>
+    </p>
+    <div class="cmt_wrapper">
+      <%= render "comments/comment_form" if logged_in? %>
+      <%= render "shared/comment" %>
+    </div>
   </div>
 </div>

@@ -1,0 +1,10 @@
+<% if @cmt_items.any? %>
+  <div class="row">
+    <ol class="microposts">
+      <%= render @cmt_items %>
+    </ol>
+    <div class="pull-right">
+      <%= will_paginate @cmt_items %>
+    </div>
+  </div>
+<% end %>

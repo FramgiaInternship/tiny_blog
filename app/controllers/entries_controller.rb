@@ -16,6 +16,7 @@ class EntriesController < ApplicationController
   def show
     @entry = Entry.find_by id: params[:id]
     @user = @entry.user
+    @cmt_items = @entry.comments.order("created_at DESC").paginate(page: params[:page], per_page: Settings.COMMENTS_PER_PAGE)
     @comment = current_user.comments.build if logged_in?
   end
 
