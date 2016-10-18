@@ -1,0 +1,10 @@
+<% provide :title, @entry.title.titleize %>
+<div class="row">
+  <aside class="col-md-4">
+    <%= render "shared/user_info" %>
+  </aside>
+  <div class="col-md-8">
+    <%= render "form" %>
+    <hr>
+  </div>
+</div>

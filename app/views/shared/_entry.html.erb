@@ -4,6 +4,8 @@
 <div class="time_entry">
   <i class="fa fa-calendar"></i>
   <%= @entry.created_at.strftime Settings.DATE_TIME_FORMAT %>
+  <%= link_to t("entries.edit.link_edit"), edit_entry_path,
+    class: "btn btn-xs btn-warning pull-right" %>
 </div>
 <div class="content_entry">
   <p>
