@@ -2,6 +2,10 @@ class UsersController < ApplicationController
   before_action :logged_in_user, only: [:following, :followers]
   attr_accessor :name, :email
 
+  def index
+    @users = User.all.paginate(page: params[:page], per_page: Settings.USERS_PER_PAGE)
+  end
+  
   def show
     @user = User.includes(:entries).find(params[:id])
   end

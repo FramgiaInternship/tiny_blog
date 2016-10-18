@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   resources :entries,       only: [:create, :show]
   resources :comments,      only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
-  resources :users, only: [:new, :create, :show] do
+  resources :users, only: [:new, :create, :show, :index] do
     member do
       get :following, :followers
     end

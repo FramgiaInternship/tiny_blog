@@ -5,7 +5,7 @@
   </aside>
   <div class="col-md-8">
     <% if (@entries = @user.entries).any? %>
-    <% @entries = @entries.paginate(page: params[:page]) %>
+    <% @entries = @entries.order("created_at DESC").paginate(page: params[:page]) %>
       <h3><%= "#{t 'users.entry_count'} (#{@entries.count})" %></h3>
       <ol class="microposts">
         <%= render "shared/entry_user" %>

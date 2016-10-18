@@ -3,6 +3,8 @@ en:
   common:
     error_msg: "The form contains "
     error: "error"
+    link_delete: "Delete"
+    delete_confirmation: "Are you sure you want to delete this %{item}?"
   static_pages:
     footer:
       about: "About"
@@ -48,7 +50,6 @@ en:
       time_stamp: "Posted %{time} ago by %{user}."
       delete_confirmation: "Are you sure you want to delete this entry?"
       header: "New Feeds"
-      link_delete: "Delete"
       msg_log_in: "Please login to post new entry."
     create:
       text_area_holder: "Say something..."
@@ -66,5 +67,7 @@ en:
     text_area_holder: "Leave a comment..."
     btn_submit: "Send"
   users:
-    no_entries: "There is no entry so fa."
+    no_entries: "There is no entry so far."
     entry_count: "Entries"
+    index_title: "All users"
+    index_header: "All users"

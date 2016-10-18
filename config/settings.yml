@@ -1,5 +1,6 @@
-GRAVATAR_PATH: "https://secure.gravatar.com/avatar/"
-CONTENT_LIMIT: 85
-DATE_TIME_FORMAT: "%d-%m-%Y %H:%M"
-COMMENTS_PER_PAGE: 10
-ENTRIES_PER_PAGE: 20
+GRAVATAR_PATH:      "https://secure.gravatar.com/avatar/"
+CONTENT_LIMIT:      85
+DATE_TIME_FORMAT:   "%d-%m-%Y %H:%M"
+COMMENTS_PER_PAGE:  10
+ENTRIES_PER_PAGE:   20
+USERS_PER_PAGE:     20
