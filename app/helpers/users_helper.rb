@@ -6,4 +6,9 @@ module UsersHelper
     url = "#{Settings.GRAVATAR_PATH}#{gravatar_id}?s=#{size}"
     image_tag url, alt: user.name, class: "gravatar"
   end
+
+  # Returns true if current user is admin.
+  def admin?
+    current_user.admin?
+  end
 end

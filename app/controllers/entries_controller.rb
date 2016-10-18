@@ -1,5 +1,6 @@
 class EntriesController < ApplicationController
-  before_action :logged_in_user, only: [:create, :edit, :update]
+  before_action :logged_in_user, only: [:create, :edit, :update, :destroy]
+  before_action :author_or_admin, only: [:edit, :update, :destroy]
 
   def create
     @entry = current_user.entries.build entry_params
@@ -33,12 +34,24 @@ class EntriesController < ApplicationController
       redirect_to @entry
     else
       @user = @entry.user
-      render 'edit'
+      render "edit"
     end
+  end
+
+  def destroy
+    Entry.find_by(id: params[:id]).destroy
+    flash[:success] = t "entries.delete.success"
+    redirect_to root_url
   end
 
   private
   def entry_params
     params.require(:entry).permit :title, :content
+  end
+
+  # Redirect when current user is not the entry's author.
+  def author_or_admin
+    @entry = current_user.entries.find_by id: params[:id]
+    redirect_to entry_url params[:id] if !admin? && @entry.nil?
   end
 end

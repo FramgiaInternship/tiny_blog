@@ -4,8 +4,13 @@
 <div class="time_entry">
   <i class="fa fa-calendar"></i>
   <%= @entry.created_at.strftime Settings.DATE_TIME_FORMAT %>
-  <%= link_to t("entries.edit.link_edit"), edit_entry_path,
-    class: "btn btn-xs btn-warning pull-right" %>
+  <% if admin? || current_user?(@entry.user) %>
+    <%= link_to t("entries.delete.link_delete"), @entry, method: :delete,
+      class: "btn btn-xs btn-danger pull-right btn-delete",
+      data: { confirm: t("common.delete_confirmation", item: :entry) } %>
+      <%= link_to t("entries.edit.link_edit"), edit_entry_path,
+      class: "btn btn-xs btn-warning pull-right" %>
+  <% end %>
 </div>
 <div class="content_entry">
   <p>

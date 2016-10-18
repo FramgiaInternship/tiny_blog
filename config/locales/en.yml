@@ -82,6 +82,9 @@ en:
       btn_submit: "Save changes"
       link_edit: "Edit"
       success: "Update successful!"
+    delete:
+      link_delete: "Delete"
+      success: "The entry has been deleted!"
   comments:
     cmt_count: "comment"
     text_area_holder: "Leave a comment..."

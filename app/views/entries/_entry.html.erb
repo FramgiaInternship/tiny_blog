@@ -12,11 +12,5 @@
       <%= t("entries.index.time_stamp",
         time: time_ago_in_words(entry.created_at), user: entry.user.name) %>
     </span>
-    <span>
-      <% if current_user? entry.user %>
-        <%= link_to t("common.link_delete"), entry, method: :delete,
-          data: { confirm: t("common.delete_confirmation", item: :entry) } %>
-      <% end %>
-    </span>
   </small>
 </li>
