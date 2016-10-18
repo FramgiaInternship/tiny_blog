@@ -6,13 +6,13 @@
     </strong>
     <%= t "entries.show.entries_count" %>
   </a>
-  <a href="<%= following_user_path @user %>">
+  <a href="#">
     <strong id="following" class="stat">
       <%= @user.following.count %>
     </strong>
     <%= t "entries.show.lb_following" %>
   </a>
-  <a href="<%= followers_user_path @user %>">
+  <a href="#">
     <strong id="followers" class="stat">
       <%= @user.followers.count %>
     </strong>

@@ -51,7 +51,7 @@ en:
       link_delete: "Delete"
       msg_log_in: "Please login to post new entry."
     create:
-      text_area_holder: "Tell people what's on your mind..."
+      text_area_holder: "Say something..."
       success: "Your entry have been posted!"
       title: "title"
       content: "content"
