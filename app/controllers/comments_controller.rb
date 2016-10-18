@@ -1,9 +1,5 @@
 class CommentsController < ApplicationController
   before_action :logged_in_user
-
-  def new
-  end
-
   def create
     @comment = current_user.comments.create
     @comment.body = params[:comment][:body]
@@ -16,8 +12,5 @@ class CommentsController < ApplicationController
       @comment = current_user.comments.build if logged_in?
       render 'entries/show'
     end
-  end
-
-  def destroy
   end
 end

@@ -1,8 +1,8 @@
 <% provide :title, t("sessions.log_in.title") %>
-<h1><%= t("sessions.log_in.header") %></h1>
+<h1><%= t "sessions.log_in.header" %></h1>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for(:session, url: login_path) do |f| %>
+    <%= form_for :session, url: login_path do |f| %>
 
       <%= f.label t "sessions.log_in.lb_email" %>
       <%= f.email_field t("sessions.log_in.lb_email"), class: 'form-control' %>
@@ -19,7 +19,8 @@
     <% end %>
 
     <p class="login_suggestion">
-      <%= t "sessions.log_in.msg_signup" %>? <%= link_to t("sessions.log_in.link_sign_up"), signup_url %>
+      <%= t "sessions.log_in.msg_signup" %>?
+      <%= link_to t("sessions.log_in.link_sign_up"), signup_url %>
       <%= link_to t("sessions.log_in.link_forgot_pass"), '#', class: "pull-right" %>
     </p>
   </div>

@@ -5,6 +5,7 @@ en:
     error: "error"
     link_delete: "Delete"
     delete_confirmation: "Are you sure you want to delete this %{item}?"
+    warning_login: "Please log in to continue!"
   static_pages:
     footer:
       about: "About"

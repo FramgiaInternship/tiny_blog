@@ -1,5 +1,6 @@
 <li id="micropost-<%= comment.id %>" class="cmt_item">
-  <%= link_to gravatar_for(comment.user, size: 50), comment.user %>
+  <%= link_to gravatar_for(comment.user, size: Settings.AVATAR_SMALL),
+    comment.user %>
   <span class="user">
     <strong><%= link_to comment.user.name, comment.user %></strong>
   </span>

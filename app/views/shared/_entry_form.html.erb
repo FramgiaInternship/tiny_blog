@@ -5,7 +5,8 @@
     <%= f.text_field :title, class: "form-control" %>
 
     <%= f.label t "entries.create.content" %>
-    <%= f.text_area :content, placeholder: t("entries.create.text_area_holder"), class: "entry_content form-control" %>
+    <%= f.text_area :content, placeholder: t("entries.create.text_area_holder"),
+      class: "entry_content form-control" %>
   </div>
   <% if logged_in? %>
     <%= f.submit "Post", class: "btn btn-primary" %>

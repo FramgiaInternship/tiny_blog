@@ -1,6 +1,5 @@
 class EntriesController < ApplicationController
-  before_action :logged_in_user, only: [:create, :destroy]
-  before_action :correct_user,   only: :destroy
+  before_action :logged_in_user, only: :create
 
   def create
     @entry = current_user.entries.build entry_params
@@ -16,17 +15,13 @@ class EntriesController < ApplicationController
   def show
     @entry = Entry.find_by id: params[:id]
     @user = @entry.user
-    @cmt_items = @entry.comments.order("created_at DESC").paginate(page: params[:page], per_page: Settings.COMMENTS_PER_PAGE)
+    @cmt_items = @entry.comments.order("created_at DESC")
+      .paginate page: params[:page], per_page: Settings.COMMENTS_PER_PAGE
     @comment = current_user.comments.build if logged_in?
   end
 
   private
   def entry_params
-    params.require(:entry).permit(:title, :content)
-  end
-
-  def correct_user
-    @entry = current_user.entries.find_by id: params[:id]
-    redirect_to root_url if @entry.nil?
+    params.require(:entry).permit :title, :content
   end
 end
