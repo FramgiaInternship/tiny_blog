@@ -43,6 +43,14 @@ en:
       header: "All users"
       following_title: "Following"
       follower_title: "Followers"
+    edit:
+      btn_submit: "Save changes"
+      title: "Update profile"
+      header: "Update your profile"
+      link_change_ava: "change..."
+      success: "Your profiles has been updated successful!"
+    delete:
+      success: "User deleted!"
   sessions:
     log_in:
       title: "Log in"

@@ -11,4 +11,9 @@ module UsersHelper
   def admin?
     current_user.nil? ? false : current_user.admin?
   end
+
+  # Returns all users.
+  def get_users
+    User.all.paginate page: params[:page], per_page: Settings.USERS_PER_PAGE
+  end
 end
