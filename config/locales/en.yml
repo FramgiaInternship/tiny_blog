@@ -35,6 +35,14 @@ en:
       lb_pass_conf: "password_confirmation"
       btn_submit: "Create my account"
       msg_success: "Welcome to Tiny Blog."
+    show:
+      no_entries: "There is no entry so far."
+      entry_count: "Entries"
+    index:
+      title: "All users"
+      header: "All users"
+      following_title: "Following"
+      follower_title: "Followers"
   sessions:
     log_in:
       title: "Log in"
@@ -75,7 +83,3 @@ en:
     btn_submit: "Send"
     cmt_fails: "Cannot submit comment!"
   users:
-    no_entries: "There is no entry so far."
-    entry_count: "Entries"
-    index_title: "All users"
-    index_header: "All users"

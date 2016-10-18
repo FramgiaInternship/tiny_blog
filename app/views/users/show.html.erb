@@ -6,13 +6,13 @@
   <div class="col-md-8">
     <% if (@entries = @user.entries).any? %>
     <% @entries = @entries.order("created_at DESC").paginate page: params[:page] %>
-      <h3><%= "#{t 'users.entry_count'} (#{@entries.count})" %></h3>
+      <h3><%= "#{t 'user.show.entry_count'} (#{@entries.count})" %></h3>
       <ol class="microposts">
         <%= render "shared/entry_user" %>
       </ol>
     <% else %>
       <p>
-        <%= t "users.no_entries" %>
+        <%= t "user.show.no_entries" %>
       </p>
     <% end %>
   </div>
