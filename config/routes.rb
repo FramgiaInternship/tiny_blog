@@ -17,4 +17,10 @@ Rails.application.routes.draw do
       get :following, :followers
     end
   end
+
+  namespace :api do
+    namespace :v1 do
+      resources :entries
+    end
+  end
 end

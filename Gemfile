@@ -17,6 +17,7 @@ gem 'bootstrap-will_paginate', '0.0.10'
 gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.1'
 gem 'pry',          '~> 0.10.4'
 gem 'autosize-rails'
+gem 'active_model_serializers', require: true
 
 group :development, :test do
   gem 'sqlite3', '1.3.11'
